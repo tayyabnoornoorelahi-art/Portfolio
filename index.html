@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tayyab Noor | Creative Designer</title>
+  <!-- FONT AWESOME CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#ffffff;
+      color:#222;
+      overflow-x:hidden;
+    }
+
+    :root{
+      --purple:#6f2cff;
+      --light:#f4ebff;
+    }
+
+    section{
+      padding:100px 10%;
+    }
+
+    .title{
+      font-size:42px;
+      margin-bottom:20px;
+      color:var(--purple);
+      text-align:center;
+    }
+
+    .subtitle{
+      text-align:center;
+      margin-bottom:60px;
+      color:#666;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      padding:18px 10%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      background:white;
+      z-index:999;
+      box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    nav h2{
+      color:var(--purple);
+    }
+
+    nav ul{
+      display:flex;
+      gap:25px;
+      list-style:none;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:#333;
+      font-weight:500;
+      transition:.3s;
+    }
+
+    nav ul li a:hover{
+      color:var(--purple);
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:50px;
+      padding-top:140px;
+    }
+
+    .hero-text{
+      flex:1;
+    }
+
+    .hero-text h1{
+      font-size:65px;
+      line-height:1.1;
+    }
+
+    .hero-text span{
+      color:var(--purple);
+    }
+
+    .typing{
+      font-size:28px;
+      color:#666;
+      margin:20px 0;
+      height:40px;
+    }
+
+    .hero-text p{
+      color:#666;
+      line-height:1.8;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      padding:14px 30px;
+      border:none;
+      background:var(--purple);
+      color:white;
+      border-radius:40px;
+      text-decoration:none;
+      transition:.3s;
+      display:inline-block;
+    }
+
+    .btn:hover{
+      transform:translateY(-5px);
+      box-shadow:0 10px 20px rgba(111,44,255,.3);
+    }
+
+    .hero-image{
+      flex:1;
+      display:flex;
+      justify-content:center;
+    }
+
+    .hero-image img{
+      width:380px;
+      border-radius:30px;
+      box-shadow:0 20px 40px rgba(111,44,255,.2);
+      animation:float 4s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%,100%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-15px);
+      }
+    }
+
+    /* ABOUT */
+
+    .about{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:50px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:25px;
+    }
+
+    .about-text h3{
+      font-size:40px;
+      margin-bottom:20px;
+      color:var(--purple);
+    }
+
+    .about-text p{
+      line-height:1.9;
+      color:#555;
+    }
+
+    /* SKILLS */
+
+    .skills-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+    }
+
+    .skill{
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      text-align:center;
+      box-shadow:0 10px 30px rgba(0,0,0,.05);
+      transition:.4s;
+      border:2px solid transparent;
+    }
+
+    .skill:hover{
+      transform:translateY(-10px);
+      border-color:var(--purple);
+    }
+
+    .skill h4{
+      margin-top:15px;
+      color:var(--purple);
+    }
+
+    /* SERVICES */
+
+    .services{
+      background:var(--light);
+    }
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+    }
+
+    .service{
+      background:white;
+      padding:35px;
+      border-radius:25px;
+      transition:.4s;
+    }
+
+    .service:hover{
+      transform:translateY(-10px);
+    }
+
+    .service h3{
+      color:var(--purple);
+      margin-bottom:15px;
+    }
+
+    /* PROJECTS */
+
+    .project-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .project{
+      background:white;
+      border-radius:25px;
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,.05);
+      transition:.4s;
+    }
+    .see-more-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 28px;
+  background:var(--purple);
+  color:white;
+  text-decoration:none;
+  border-radius:50px;
+  font-weight:500;
+  transition:.4s;
+  box-shadow:0 10px 25px rgba(111,44,255,.25);
+}
+
+.see-more-btn i{
+  transition:.4s;
+}
+
+.see-more-btn:hover{
+  transform:translateY(-5px);
+  background:#5b1fe0;
+}
+
+.see-more-btn:hover i{
+  transform:translateX(5px);
+}
+
+    .project:hover{
+      transform:translateY(-10px);
+    }
+
+    .project img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+    }
+
+    .project-content{
+      padding:25px;
+    }
+
+    .project-content h3{
+      color:var(--purple);
+      margin-bottom:10px;
+    }
+
+    .project-content p{
+      color:#666;
+      margin-bottom:20px;
+    }
+
+    /* GALLERY */
+
+   
+/* ================= GALLERY ================= */
+
+.gallery{
+  background:#f4ebff;
+  padding:100px 10%;
+}
+
+.title{
+  text-align:center;
+  font-size:42px;
+  color:#6f2cff;
+  margin-bottom:40px;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.gallery-item{
+  position:relative;
+  border-radius:18px;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.gallery-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.4s;
+  display:block;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.1);
+  filter:brightness(0.5);
+}
+
+/* hover title */
+.gallery-item::after{
+  content:attr(data-title);
+  position:absolute;
+  bottom:15px;
+  left:15px;
+  right:15px;
+  color:#fff;
+  font-weight:600;
+  font-size:16px;
+  opacity:0;
+  transform:translateY(10px);
+  transition:.3s;
+}
+
+.gallery-item:hover::after{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ================= LIGHTBOX ================= */
+
+.lightbox{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.92);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+.lightbox.active{
+  display:flex;
+}
+
+.lightbox-img{
+  max-width:90vw;
+  max-height:85vh;
+  border-radius:15px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* buttons */
+.close, .prev, .next{
+  position:absolute;
+  color:#fff;
+  font-size:28px;
+  background:rgba(255,255,255,0.12);
+  padding:10px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  transition:.3s;
+  user-select:none;
+}
+
+.close:hover,
+.prev:hover,
+.next:hover{
+  background:rgba(255,255,255,0.25);
+}
+
+.close{ top:20px; right:25px; }
+.prev{ left:25px; top:50%; transform:translateY(-50%); }
+.next{ right:25px; top:50%; transform:translateY(-50%); }
+
+
+   /* ================= CONTACT ================= */
+
+.contact{
+  background:linear-gradient(135deg,#f4ebff,#ffffff);
+  padding:100px 10%;
+}
+
+.contact-container{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  margin-top:40px;
+  background:white;
+  padding:40px;
+  border-radius:25px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+/* LEFT SIDE */
+.contact-info h3{
+  font-size:28px;
+  color:#6f2cff;
+  margin-bottom:20px;
+}
+
+.contact-info p{
+  margin:10px 0;
+  color:#555;
+}
+
+/* SOCIAL ICONS */
+.social{
+  margin-top:20px;
+  display:flex;
+  gap:15px;
+}
+
+.social a{
+  width:45px;
+  height:45px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#f4ebff;
+  color:#6f2cff;
+  font-size:18px;
+  transition:.3s;
+}
+
+.social a:hover{
+  background:#6f2cff;
+  color:white;
+  transform:translateY(-5px);
+}
+
+/* FORM */
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  padding:14px;
+  border:2px solid #eee;
+  border-radius:12px;
+  outline:none;
+  transition:.3s;
+  font-size:14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color:#6f2cff;
+  box-shadow:0 0 10px rgba(111,44,255,0.2);
+}
+
+.contact-form button{
+  padding:14px;
+  border:none;
+  background:#6f2cff;
+  color:white;
+  font-size:16px;
+  border-radius:12px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.contact-form button:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 20px rgba(111,44,255,0.3);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  background:#6f2cff;
+  color:white;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .contact-container{
+    grid-template-columns:1fr;
+  }
+}
+    /* ANIMATION */
+
+    .hidden{
+      opacity:0;
+      transform:translateY(40px);
+      transition:all 1s;
+    }
+
+    .show{
+      opacity:1;
+      transform:translateY(0);
+    }
+    .skill i{
+  font-size:55px;
+  color:var(--purple);
+  margin-bottom:20px;
+  transition:.4s;
+}
+
+.skill:hover i{
+  transform:scale(1.2) rotate(5deg);
+}
+
+.skill h4{
+  margin-top:10px;
+  color:var(--purple);
+  font-size:20px;
+}
+
+    /* MOBILE */
+
+    @media(max-width:900px){
+
+      nav ul{
+        display:none;
+      }
+
+      .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+      }
+
+      .hero-text h1{
+        font-size:45px;
+      }
+
+      .hero-image img{
+        width:300px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+    <h2>Tayyab Noor</h2>
+
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#gallery">Designs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-text hidden">
+      <h1>Hi, I'm <span>Tayyab Noor</span></h1>
+
+      <div class="typing"></div>
+
+      <p>
+        Passionate creative designer and frontend learner creating
+        modern websites, eye-catching thumbnails, social media posts,
+        and aesthetic UI designs with creativity and style.
+      </p>
+
+      <a href="#" class="btn">Hire Me</a>
+    </div>
+
+    <div class="hero-image hidden">
+      <img src="./ChatGPT Image May 21, 2026, 01_37_36 PM (1).png">
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <h2 class="title hidden">About Me</h2>
+
+    <div class="about">
+
+      <img src="./ChatGPT Image May 21, 2026, 01_37_36 PM (2).png" class="hidden">
+
+      <div class="about-text hidden">
+
+        <h3>Creative Designer</h3>
+
+        <p>
+          I create modern websites, thumbnails, social media posts,
+          UI concepts, and interactive designs. I love combining
+          creativity with frontend development to build visually
+          impressive digital experiences.
+          <br><br>
+          My goal is to turn ideas into beautiful and responsive designs
+          that look professional on every device.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+
+
+
+<section id="skills">
+
+  <h2 class="title hidden">My Skills</h2>
+  <p class="subtitle hidden">Things I love working on</p>
+
+  <div class="skills-container">
+
+    <div class="skill hidden">
+      <i class="fa-brands fa-html5"></i>
+      <h4>HTML5</h4>
+    </div>
+
+    <div class="skill hidden">
+      <i class="fa-brands fa-css3-alt"></i>
+      <h4>CSS3</h4>
+    </div>
+
+    <div class="skill hidden">
+      <i class="fa-brands fa-js"></i>
+      <h4>JavaScript</h4>
+    </div>
+
+    <div class="skill hidden">
+      <i class="fa-solid fa-pen-nib"></i>
+      <h4>Graphic Design</h4>
+    </div>
+
+    <div class="skill hidden">
+      <i class="fa-solid fa-image"></i>
+      <h4>Thumbnail Design</h4>
+    </div>
+
+    <div class="skill hidden">
+      <i class="fa-solid fa-share-nodes"></i>
+      <h4>Social Media Posts</h4>
+    </div>
+
+    <div class="skill hidden">
+      <i class="fa-solid fa-camera-retro"></i>
+      <h4>Photo Editing</h4>
+    </div>
+
+    <div class="skill hidden">
+      <i class="fa-solid fa-layer-group"></i>
+      <h4>UI/UX Design</h4>
+    </div>
+
+  </div>
+
+</section>
+  <!-- SERVICES -->
+
+  <section class="services" id="services">
+
+    <h2 class="title hidden">Services</h2>
+
+    <div class="service-grid">
+
+      <div class="service hidden">
+        <h3>Website Design</h3>
+        <p>
+          Responsive modern websites with smooth animations and clean UI.
+        </p>
+      </div>
+
+      <div class="service hidden">
+        <h3>Thumbnail Design</h3>
+        <p>
+          Eye-catching YouTube thumbnails for gaming and content creators.
+        </p>
+      </div>
+
+      <div class="service hidden">
+        <h3>Social Media Posts</h3>
+        <p>
+          Professional Instagram and Facebook post designs.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section id="projects">
+
+    <h2 class="title hidden">Projects</h2>
+
+    <div class="project-grid">
+
+      <div class="project hidden">
+
+        <img src="./Screenshot 2026-05-21 141935.png">
+
+        <div class="project-content">
+
+          <h3>Forkify App</h3>
+
+          <p>
+           A recipe finder app . User can search any recipe and find their detail
+          </p>
+
+          <a href="#" class="btn">Live Demo</a>
+
+        </div>
+
+      </div>
+
+      <div class="project hidden">
+
+        <img src="./Gemini_Generated_Image_t2tofft2tofft2to (1).png">
+
+        <div class="project-content">
+
+          <h3>Social Media App</h3>
+
+          <p>
+            Full Stack responsive Social Media App with creative UI design.
+          </p>
+
+          <a href="https://tayyabnoornoorelahi-art.github.io/BuzzBoard-SocialMedia-App/" class="btn">Live Demo</a>
+
+        </div>
+
+      </div>
+
+      <div class="project hidden">
+
+        <img src="./Gemini_Generated_Image_61tu6r61tu6r61tu.png">
+
+        <div class="project-content">
+
+          <h3>Helplestic Hub</h3>
+
+          <p>
+            Helplestic Website . Help Developers to Connect to Each other . Solve their problem Easily .
+          </p>
+
+          <a href="https://tayyabnoornoorelahi-art.github.io/Help-Hub-hackathon/" class="btn">Live Demo</a>
+
+        </div>
+
+      </div>
+
+    </div>
+ <a style="margin-top: 50px; margin-left: 450px;" href="https://github.com/tayyabnoornoorelahi-art" class="see-more-btn">
+  See More
+  <i class="fa-solid fa-arrow-right"></i>
+</a>
+  </section>
+
+ 
+
+  <!-- GALLERY -->
+
+  <!-- ================= GALLERY ================= -->
+<section class="gallery">
+  <h2 class="title">Design Gallery</h2>
+
+  <div class="gallery-grid">
+
+    <div class="gallery-item" data-title="Modern UI Design">
+      <img src="https://i.pinimg.com/736x/f9/c3/b1/f9c3b12304d2fb117729412eeb0418ea.jpg">
+    </div>
+
+    <div class="gallery-item" data-title="Creative Poster">
+      <img src="https://i.pinimg.com/736x/f0/03/dd/f003dd39b94cc7cc8c7d055b727a9fb2.jpg">
+    </div>
+
+    <div class="gallery-item" data-title="Tayyab Banner">
+      <img src="https://i.pinimg.com/736x/51/dc/19/51dc193a3371daf20584a2f688366e76.jpg">
+    </div>
+
+    <div class="gallery-item" data-title="Social Media Post">
+      <img src="https://i.pinimg.com/1200x/aa/47/09/aa47099305b8f2072b8b620e8636e487.jpg">
+    </div>
+
+    <div class="gallery-item" data-title="Minimal UI Concept">
+      <img src="https://i.pinimg.com/736x/e2/c0/c5/e2c0c5dacd5e51a1af2f9a67a2f32047.jpg">
+    </div>
+
+    <div class="gallery-item" data-title="Dark Theme Design">
+      <img src="https://i.pinimg.com/736x/c3/2f/20/c32f20f2324189eb53f9ec3762f61e94.jpg">
+    </div>
+
+    <div class="gallery-item" data-title="Creative Branding">
+      <img src="https://i.pinimg.com/736x/32/d8/9b/32d89b7e54c6d87c018cb9ad915f6256.jpg">
+    </div>
+
+    <div class="gallery-item" data-title="Typography Art">
+      <img src="https://i.pinimg.com/736x/ee/18/0f/ee180f17fcf678917251687ddfcf1d64.jpg">
+    </div>
+
+    <div class="gallery-item" data-title="Aesthetic Poster">
+      <img src="https://i.pinimg.com/736x/4e/71/89/4e718969c7612eab827bd396611e7b9e.jpg">
+    </div>
+
+    <div class="gallery-item" data-title="Futuristic UI">
+      <img src="https://i.pinimg.com/1200x/9f/50/50/9f5050dc6547f94f8628f996194e9c4c.jpg">
+    </div>
+
+    <div class="gallery-item" data-title="Creative Layout">
+      <img src="https://i.pinimg.com/736x/50/f6/15/50f61588a78141fca6acf91952ca2f8f.jpg">
+    </div>
+
+    <div class="gallery-item" data-title="Art Poster Design">
+      <img src="https://i.pinimg.com/736x/73/a7/6e/73a76e263a0c7ac50a5700977ddf1c87.jpg">
+    </div>
+
+    <div class="gallery-item" data-title="Abstract Design">
+      <img src="https://i.pinimg.com/736x/a9/74/ca/a974ca35611eb5731876a99b46d2ff4f.jpg">
+    </div>
+
+    <div class="gallery-item" data-title="Dark Aesthetic UI">
+      <img src="https://i.pinimg.com/736x/79/4e/79/794e796cc2e3d2b01dca4a6b2a0bcb9e.jpg">
+    </div>
+
+    <div class="gallery-item" data-title="Modern Poster">
+      <img src="https://i.pinimg.com/736x/3c/b4/a1/3cb4a1fefabb70b1d533bd1edb370701.jpg">
+    </div>
+
+    <div class="gallery-item" data-title="Creative Feed Design">
+      <img src="https://i.pinimg.com/736x/01/03/84/010384d73b1dd61f5b2bd0494e3e5d28.jpg">
+    </div>
+
+    <div class="gallery-item" data-title="Social Media Art">
+      <img src="https://i.pinimg.com/736x/91/41/14/914114de2aeb10607c9361701c970229.jpg">
+    </div>
+
+    <div class="gallery-item" data-title="Modern Graphics">
+      <img src="https://i.pinimg.com/736x/5b/3c/3b/5b3c3b9fcf70ceb084256fcbfb938660.jpg">
+    </div>
+
+    <div class="gallery-item" data-title="Final Creative Design">
+      <img src="https://i.pinimg.com/1200x/fa/c6/11/fac611cd46ac95127d507094ed621a22.jpg">
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lightbox" id="lightbox">
+
+  <span class="close">&times;</span>
+  <span class="prev">&#10094;</span>
+  <span class="next">&#10095;</span>
+
+  <img class="lightbox-img" src="">
+</div>
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact">
+
+  <h2 class="title hidden">Let’s Work Together</h2>
+  <p class="subtitle hidden">Got an idea? Let’s turn it into something amazing 🚀</p>
+
+  <div class="contact-container hidden">
+
+    <!-- LEFT INFO -->
+    <div class="contact-info">
+      <h3>Contact Info</h3>
+
+      <p>📧 tayyabnoor@email.com</p>
+      <p>📱 +92 345 3026406</p>
+      <p>📍 Karachi, Pakistan</p>
+
+      <div class="social">
+        <a href="https://www.youtube.com/@ItsTayyabDeveloper"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@mine_people_helper"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://github.com/tayyabnoornoorelahi-art"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/tayyab-noor-11a295364/"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message 🚀</button>
+    </form>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2026 Tayyab Noor | Creative Designer</p>
+</footer>
+
+
+  <!-- JS -->
+
+  <script>
+
+    // TYPING EFFECT
+
+    const text = [
+      "Creative Designer",
+      "Frontend Learner",
+      "Thumbnail Designer",
+      "Graphic Designer"
+    ];
+
+    let speed = 100;
+    const typing = document.querySelector(".typing");
+
+    let textIndex = 0;
+    let charIndex = 0;
+
+    function type(){
+
+      if(charIndex < text[textIndex].length){
+
+        typing.innerHTML += text[textIndex].charAt(charIndex);
+
+        charIndex++;
+
+        setTimeout(type,speed);
+
+      }
+      else{
+
+        setTimeout(erase,1500);
+
+      }
+
+    }
+
+    function erase(){
+
+      if(charIndex > 0){
+
+        typing.innerHTML =
+        text[textIndex].substring(0,charIndex-1);
+
+        charIndex--;
+
+        setTimeout(erase,50);
+
+      }
+      else{
+
+        textIndex++;
+
+        if(textIndex >= text.length){
+          textIndex = 0;
+        }
+
+        setTimeout(type,500);
+
+      }
+
+    }
+
+    window.onload = type;
+
+
+    // SCROLL ANIMATION
+
+    const observer = new IntersectionObserver((entries)=>{
+
+      entries.forEach((entry)=>{
+
+        if(entry.isIntersecting){
+          entry.target.classList.add("show");
+        }
+
+      });
+
+    });
+
+    const hiddenElements = document.querySelectorAll(".hidden");
+
+    hiddenElements.forEach((el)=>observer.observe(el));
+    const items = document.querySelectorAll(".gallery-item");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.querySelector(".lightbox-img");
+
+let currentIndex = 0;
+
+// open
+items.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    currentIndex = index;
+    openLightbox();
+  });
+});
+
+function openLightbox(){
+  const img = items[currentIndex].querySelector("img").src;
+  lightboxImg.src = img;
+  lightbox.classList.add("active");
+}
+
+// close
+document.querySelector(".close").onclick = () => {
+  lightbox.classList.remove("active");
+};
+
+// next
+document.querySelector(".next").onclick = () => {
+  currentIndex = (currentIndex + 1) % items.length;
+  openLightbox();
+};
+
+// prev
+document.querySelector(".prev").onclick = () => {
+  currentIndex = (currentIndex - 1 + items.length) % items.length;
+  openLightbox();
+};
+
+// click outside closes
+lightbox.addEventListener("click", (e) => {
+  if(e.target === lightbox){
+    lightbox.classList.remove("active");
+  }
+});
+
+
+  </script>
+
+</body>
+</html>
